@@ -35,6 +35,26 @@
         z-index: 99;
 
     }
+     .title{
+        position: absolute;
+        top:200px;
+        left: 270px;
+        width: 100%;
+        padding: 20px 100px;
+        color: white;
+        display: flex;
+       }
+       .heading{
+        position: absolute;
+        top:230px;
+        left: 200px;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        font-size: 2.7em;
+        color:white;
+        user-select: none;
+       } 
     .logo{
         font-size: 2em;
         color:white;
@@ -89,6 +109,37 @@
         color: white;
     }
     
+     /* .search { 
+        position: relative;
+    text-align: center; 
+    margin-top: 2rem; 
+    } 
+    .search form { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    } 
+    
+    .search input[type="text"] { 
+        padding: 10px; 
+        margin-right: 10px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+    } 
+    
+    .search button { 
+        background-color: #ff6600; 
+        color: #fff; 
+        border: none; 
+        padding: 10px 200px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+    } 
+    
+    .search button:hover { 
+        background-color: #ff3300; 
+    }   */
     .wrapper{
         position: relative;
         width: 400px;
@@ -270,22 +321,49 @@
 
        }
 
-
   </style>
 </head>
 <body>
     <header>
-
+        <p class="title ">FIND JOBS,CREATE TRACKABLE RESUMES AND ENRICH YOUR APPLICATIONS.</p>
+        <h3 class="heading">The Easiest Way to Get Your New Job</h3>
         <h2 class="logo">Jobfind</h2>
         <nav class = "navigation">
             <a href="home">Home</a> 
             <a href="jobfind">Find Jobs</a>
             <a href="Companies">Companies</a>
-            <a href="about">About Jofind</a>
+            <a href="about">About Us</a>
+            <a href="contact">Contact</a>
             <button class="btnlogin-popup" href="signin">Sign In</button>
-      </nav>
+      </nav> 
     </header>
-
+    {{-- <section class="search">  
+        <form action="#" method="get"> 
+            <input type="text" name="keywords" placeholder="Keywords">
+            <input  type="text" name="location" placeholder="Location"> 
+            <input type="text" name="company" placeholder="Company"> 
+            <button type="submit">Search </button> 
+        </form> 
+    </section>  --}}
+    {{-- <section class="job-listings"> 
+        <h2>Latest Job Listings</h2> 
+        <ul> 
+            <li> 
+                <h3>Web Developer</h3> 
+                <p>Company: ABC Tech</p> 
+                <p>Location: India</p> 
+                <p>Description: Good Web Developer</p> 
+                <a href="#">Apply Now</a> 
+            </li> 
+            <li> 
+                <h3>Graphic Designer</h3> 
+                <p>Company: XYZ Design</p> 
+                <p>Location: India </p> 
+                <p>Description:Good Graphic Designer</p> 
+                <a href="#">Apply Now</a> 
+            </li> 
+        </ul> 
+    </section>  --}}
     <div class="wrapper">
         <span class="icon-close"><ion-icon 
             name="close"></ion-icon>
