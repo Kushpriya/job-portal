@@ -139,7 +139,54 @@
     
     .search button:hover { 
         background-color: #ff3300; 
-    }   */
+    }   
+
+    .job-listings { 
+    margin: 2rem 0; 
+    } 
+    
+    .job-listings h2 { 
+        font-size: 24px; 
+        margin-bottom: 1rem; 
+        text-align: center; 
+    } 
+    
+    .job-listings ul { 
+        list-style: none; 
+    } 
+    
+    .job-listings li { 
+        background-color: #fff; 
+        border: 1px solid #ccc; 
+        padding: 20px; 
+        margin-bottom: 20px; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    } 
+    
+    .job-listings h3 { 
+        font-size: 20px; 
+        margin-bottom: 10px; 
+    } 
+    
+    .job-listings p { 
+        font-size: 14px; 
+        margin-bottom: 10px; 
+    } 
+    
+    .job-listings a { 
+        background-color: #333; 
+        color: #fff; 
+        text-decoration: none; 
+        padding: 10px 20px; 
+        border-radius: 4px; 
+        display: inline-block; 
+        transition: background-color 0.3s; 
+    } 
+    
+    .job-listings a:hover { 
+        background-color: #ff6600; 
+    } */
+  
     .wrapper{
         position: relative;
         width: 400px;
