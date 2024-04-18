@@ -32,7 +32,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 99;
+        z-index: 0;
 
     }
      .title{
@@ -109,39 +109,68 @@
         color: white;
     }
     
-     /* .search { 
-        position: relative;
-    text-align: center; 
+    .search { 
+    position: absolute;
+    text-align: center;
     margin-top: 2rem; 
+    z-index: 0;
     } 
+
+    .input-group {
+        position: relative;
+    }
+
+    .input-group .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1px;
+        color: #aaa;
+    }
+
+    .input-group input[type="text"] {
+        padding-left: 50px; 
+        text-align: justify;
+    }
+
+    
+  
     .search form { 
         display: flex; 
         justify-content: center; 
         align-items: center; 
+        
     } 
     
     .search input[type="text"] { 
-        padding: 10px; 
+        padding: 15px; 
         margin-right: 10px; 
-        border: 1px solid #ccc; 
         border-radius: 4px; 
+        background: white;
+        border: 2px solid white;
+        outline: none;
+        border-radius: 6px;
     } 
     
     .search button { 
-        background-color: #ff6600; 
-        color: #fff; 
-        border: none; 
-        padding: 10px 200px; 
-        border-radius: 4px; 
-        cursor: pointer; 
-        transition: background-color 0.3s; 
+        width: 150px;
+        height: 50px;
+        border: 2px solid white;
+        outline: none;
+        border-radius: 6px; 
+        cursor: pointer;
+        font-size: 1.3em;
+        color:black;
+        transition: .5s;  
     } 
     
     .search button:hover { 
-        background-color: #ff3300; 
+        background-color:green; 
+        color: white;
+
     }   
 
-    .job-listings { 
+    /*.job-listings { 
     margin: 2rem 0; 
     } 
     
@@ -191,7 +220,7 @@
         position: relative;
         width: 400px;
         height: 440px;
-        background: transparent;
+        background:transparent;
         border: 2px solid rgb(218, 211, 211);
         border-radius: 20px;
         backdrop-filter: blur(20px);
@@ -205,6 +234,8 @@
 
     .wrapper.active-popup{
         transform: scale(1);
+        position: absolute;
+        margin: 0 auto;
     }
 
     .wrapper .active{
@@ -384,6 +415,25 @@
             <button class="btnlogin-popup" href="signin">Sign In</button>
       </nav> 
     </header>
+
+    <section class="search">
+        <form action="#" method="get">
+            <div class="input-group">
+                <span class="icon"><ion-icon name="search-outline"></ion-icon></span>
+                <input type="text" name="keywords" placeholder="Keywords">
+            </div>
+            <div class="input-group">
+                <span class="icon"><ion-icon name="navigate-outline"></ion-icon></span>
+                <input type="text" name="location" placeholder="Location">
+            </div>
+            <div class="input-group">
+                <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
+                <input type="text" name="company" placeholder="Company">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </section>
+    
     {{-- <section class="search">  
         <form action="#" method="get"> 
             <input type="text" name="keywords" placeholder="Keywords">
@@ -398,14 +448,14 @@
             <li> 
                 <h3>Web Developer</h3> 
                 <p>Company: ABC Tech</p> 
-                <p>Location: India</p> 
+                <p>Location: Nepal</p> 
                 <p>Description: Good Web Developer</p> 
                 <a href="#">Apply Now</a> 
             </li> 
             <li> 
                 <h3>Graphic Designer</h3> 
                 <p>Company: XYZ Design</p> 
-                <p>Location: India </p> 
+                <p>Location: Nepal </p> 
                 <p>Description:Good Graphic Designer</p> 
                 <a href="#">Apply Now</a> 
             </li> 
