@@ -109,12 +109,6 @@
         color: white;
     }
     
-    .search { 
-    position: absolute;
-    text-align: center;
-    margin-top: 2rem; 
-    z-index: 0;
-    } 
 
     .input-group {
         position: relative;
@@ -133,7 +127,12 @@
         text-align: justify;
     }
 
-    
+    .search { 
+    position: absolute;
+    text-align: center; 
+    margin-top: 2rem; 
+    z-index: 0;
+    } 
   
     .search form { 
         display: flex; 
@@ -250,7 +249,7 @@
     .wrapper .form-box.login
     {
         /* display: none; */
-        transition: transform .18s ease;
+        transition: transform 0.18s ease;
         transform: translateX(0);
     }
 
@@ -314,7 +313,7 @@
         color: black;
         font-weight: 500;
         pointer-events: none;
-        transition: .5s;
+        transition: 0.5s;
        }
 
        .input-box input:focus~label,
@@ -344,7 +343,7 @@
        }
 
        .remember-forgot{
-        font-size: .9em;
+        font-size: 0.9em;
         color: black;
         font-weight: 500;
         margin: -15px 0 15px;
@@ -434,14 +433,6 @@
         </form>
     </section>
     
-    {{-- <section class="search">  
-        <form action="#" method="get"> 
-            <input type="text" name="keywords" placeholder="Keywords">
-            <input  type="text" name="location" placeholder="Location"> 
-            <input type="text" name="company" placeholder="Company"> 
-            <button type="submit">Search </button> 
-        </form> 
-    </section>  --}}
     {{-- <section class="job-listings"> 
         <h2>Latest Job Listings</h2> 
         <ul> 
@@ -462,22 +453,19 @@
         </ul> 
     </section>  --}}
     <div class="wrapper">
-        <span class="icon-close"><ion-icon 
-            name="close"></ion-icon>
+        <span class="icon-close"><ion-icon name="close"></ion-icon>
         </span>
 
         <div class="form-box login">
             <h2>Login</h2>
             <form action="#">
                 <div class="input-box">
-                    <span class="icon"><ion-icon 
-                        name="mail"></ion-icon></span>
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
                     <input type="email" required>
                     <label> Email</label>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon 
-                        name="lock-closed"></ion-icon></span>
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                     <input type="password" required>
                     <label>Password</label>
                 </div>
@@ -492,8 +480,7 @@
 
                 <div class="login-register">
                     <p>Don't have an account?
-                        <a href="#"
-                        class="register-link">Register</a>
+                        <a href="#"class="register-link">Register</a>
                     </p>
             </form>
          </div>
@@ -532,8 +519,7 @@
 
                 <div class="login-register">
                     <p>Already have an account?
-                        <a href="#"
-                        class="login-link">Login</a>
+                        <a href="#"class="login-link">Login</a>
                     </p>
             </form>
          </div>
@@ -543,28 +529,32 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script>
-            const wrapper = document.querySelector('.wrapper');
-        const loginlink = document.querySelector('.login-link');
-        const registerlink = document.querySelector('.register-link');
-        const btnPopup = document.querySelector('.btnlogin-popup');
-        const iconClose = document.querySelector('.icon-close');
+        const wrapper = document.querySelector('.wrapper');
+    const loginlink = document.querySelector('.login-link');
+    const registerlink = document.querySelector('.register-link');
+    const btnPopup = document.querySelector('.btnlogin-popup');
+    const iconClose = document.querySelector('.icon-close');
 
-        registerlink.addEventListener('click', () => {
-            wrapper.classList.add('active-popup');
-        });
+    function togglePopup() {
+            wrapper.classList.toggle('active-popup');
+        }
 
-        loginlink.addEventListener('click', () => {
-            wrapper.classList.remove('active-popup');
-        });
+    loginlink.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    });
 
-        btnPopup.addEventListener('click', () => {
-            wrapper.classList.add('active-popup');
-        });
+    registerlink.addEventListener('click', () => {
+        wrapper.classList.add('active-popup');
+    });
 
-        iconClose.addEventListener('click', () => {
-            wrapper.classList.remove('active-popup');
-        });
+    btnPopup.addEventListener('click', () => {
+        wrapper.classList.add('active-popup');
+    });
 
-    </script>
+    iconClose.addEventListener('click', () => {
+        wrapper.classList.remove('active-popup');
+    });
+
+</script>
 </body>
 </html> 
