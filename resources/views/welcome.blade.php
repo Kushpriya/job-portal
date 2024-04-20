@@ -23,7 +23,7 @@
         }
 
     header {
-        position: fixed;;
+        position: fixed;
         top:0%;
         left: 0%;
         width: 100%;
@@ -151,7 +151,6 @@
         border: 2px solid white;
         outline: none;
         border-radius: 6px;
-        box
     } 
     
     .search button { 
@@ -271,6 +270,10 @@
         display: none;
     }
 
+    .wrapper.active .form-box.register{
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
     .wrapper.active-popup .form-box.login
     {
     transition:none;
@@ -574,6 +577,6 @@
         wrapper.classList.remove('active-popup');
     });
 
-</script>
-</body>
+    </script>
+ </body>
 </html> 
