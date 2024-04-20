@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>User UI</title>
     <style>
         *{
             margin: 0%;
@@ -130,7 +130,9 @@
     .search { 
     position: absolute;
     text-align: center; 
-    margin-top: 2rem; 
+    top: 42%;
+    left: 10%;
+    margin-bottom: 2rem; 
     z-index: 0;
     } 
   
@@ -142,17 +144,18 @@
     } 
     
     .search input[type="text"] { 
-        padding: 15px; 
-        margin-right: 10px; 
+        padding: 15px 30px; 
+        margin-right: 20px; 
         border-radius: 4px; 
         background: white;
         border: 2px solid white;
         outline: none;
         border-radius: 6px;
+        box
     } 
     
     .search button { 
-        width: 150px;
+        width: 200px;
         height: 50px;
         border: 2px solid white;
         outline: none;
@@ -169,52 +172,54 @@
 
     }   
 
-    /*.job-listings { 
-    margin: 2rem 0; 
+    .job-listings { 
+     position: absolute;
+     top: 60%;
+     left: 5%;
+
     } 
     
-    .job-listings h2 { 
-        font-size: 24px; 
+     .job-listings h2 { 
+        font-size: 30px; 
         margin-bottom: 1rem; 
         text-align: center; 
-    } 
+        color: #ff6600;
+    }  
     
-    .job-listings ul { 
-        list-style: none; 
-    } 
-    
-    .job-listings li { 
-        background-color: #fff; 
-        border: 1px solid #ccc; 
-        padding: 20px; 
-        margin-bottom: 20px; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    } 
-    
-    .job-listings h3 { 
-        font-size: 20px; 
-        margin-bottom: 10px; 
-    } 
-    
-    .job-listings p { 
-        font-size: 14px; 
-        margin-bottom: 10px; 
-    } 
-    
-    .job-listings a { 
-        background-color: #333; 
-        color: #fff; 
-        text-decoration: none; 
-        padding: 10px 20px; 
-        border-radius: 4px; 
-        display: inline-block; 
-        transition: background-color 0.3s; 
-    } 
-    
-    .job-listings a:hover { 
-        background-color: #ff6600; 
-    } */
-  
+    .job-listings ul {
+        list-style: none;
+
+}
+
+.job-listings li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.job-listings h3,
+.job-listings p {
+    margin: 5px 0;
+}
+
+.job-listings a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.job-listings a:hover {
+    background-color:green;
+}
+
     .wrapper{
         position: relative;
         width: 400px;
@@ -433,7 +438,7 @@
         </form>
     </section>
     
-    {{-- <section class="job-listings"> 
+    <section class="job-listings"> 
         <h2>Latest Job Listings</h2> 
         <ul> 
             <li> 
@@ -450,8 +455,25 @@
                 <p>Description:Good Graphic Designer</p> 
                 <a href="#">Apply Now</a> 
             </li> 
+            <li> 
+                <h3>Data Analyst</h3> 
+                <p>Company: Data Insights Co.</p> 
+                <p>Location: New York, USA</p> 
+                <p>Description: Analyze data sets.</p> 
+                <a href="#">Apply Now</a> 
+            </li>
+            
+            <li> 
+                <h3>Software Engineer</h3> 
+                <p>Company: Tech Innovations Inc.</p> 
+                <p>Location: San Francisco, USA</p> 
+                <p>Description: Develop software applications.</p> 
+                <a href="#">Apply Now</a> 
+            </li>
+            
         </ul> 
-    </section>  --}}
+    </section> 
+
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon>
         </span>
@@ -482,6 +504,7 @@
                     <p>Don't have an account?
                         <a href="#"class="register-link">Register</a>
                     </p>
+                </div>
             </form>
          </div>
 
@@ -534,10 +557,6 @@
     const registerlink = document.querySelector('.register-link');
     const btnPopup = document.querySelector('.btnlogin-popup');
     const iconClose = document.querySelector('.icon-close');
-
-    function togglePopup() {
-            wrapper.classList.toggle('active-popup');
-        }
 
     loginlink.addEventListener('click', () => {
         wrapper.classList.remove('active-popup');
