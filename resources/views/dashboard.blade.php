@@ -96,11 +96,16 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
                             <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                                <i class="lni lni-user"></i>
+                                <div class="user-icon-container">
+                                    <i class="lni lni-user dark-circle"></i>
+                                </div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end rounded">
-
-                            </div>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="lni lni-home"></i> Dashboard</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="lni lni-user"></i> Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="lni lni-exit"></i> Logout</a></li>
+                            </ul>
+                            
                         </li>
                     </ul>
                 </div>

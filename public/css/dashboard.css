@@ -156,7 +156,7 @@ a.sidebar-link:hover {
 }
 
 .navbar {
-    background-color: #e7dbdb;
+    background-color: #fdf9f9;
     box-shadow: 0 0 2rem 0 rgba(14, 16, 17, 0.1);
 }
 
@@ -171,10 +171,11 @@ a.sidebar-link:hover {
 
 .btn-group {
     display: flex;
-    padding: 20px 30px;
+    padding: 50px 30px;
     border-radius: 6px;
     border: 2px solid white;
     align-items: center;
+    margin-left: ;
 
 }
 .btn{
@@ -182,18 +183,14 @@ a.sidebar-link:hover {
         background: rgb(226, 227, 234);
         width: 300px;
         height: 100px;
-
         font-size: 1.2em;
         margin-right: 20px;
         display: inline-flex;
         margin-bottom: 20px;
         border-radius: 6px;
-        /* margin-right: right; */
-
-    
 }
 .btn:hover {
-    background-color: rgb(175, 176, 215); 
+    background-color: rgb(51, 26, 129); 
     color: #fff;
 }
 .btn i {
@@ -204,19 +201,32 @@ a.sidebar-link:hover {
 
 }
 .icon-red {
-    color: red;
-}
-
-.icon-blue {
-    color: blue;
-}
-
-.icon-green {
     color: green;
 }
 
-.icon-purple {
-    color: purple;
+.icon-blue {
+    color: orange;
 }
+
+.icon-green {
+    color: red;
+}
+
+.icon-purple {
+    color: blue;
+}
+
+.dark-circle {
+    border-radius: 50%;
+    background-color: #0d0808; 
+    padding: 5px; 
+    font-size: 1.5em; 
+}
+
+.user-icon-container {
+    display: inline-block;
+    margin-right: 5px; 
+}
+
 
 @media (min-width: 768px) {}
